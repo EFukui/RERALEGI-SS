@@ -1,0 +1,15 @@
+assets/hero.png
+
+assets/lineup_highsocks.png
+assets/lineup_highsocks_wearing.png
+
+assets/lineup_spats10.png
+assets/lineup_spats10_wearing.png
+
+assets/scene_onepiece.png
+assets/scene_outing.png
+assets/scene_leisure.png
+assets/scene_cooler.png
+
+assets/texture_cool.png
+assets/texture_pressure.png

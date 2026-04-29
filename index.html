@@ -15,7 +15,7 @@
       --aw: #eadfce;
       --ss: #e9f3ec;
       --cool: #e7f2f7;
-      --accent: #6f6d66;
+      --pressure: #e7f3f6;
     }
 
     * {
@@ -49,7 +49,7 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid var(--line);
-      background: rgba(248,247,243,.9);
+      background: rgba(248, 247, 243, .9);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -131,7 +131,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 54px 32px;
     }
 
@@ -154,9 +154,10 @@
       display: grid;
       place-items: center;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(28px, 4vw, 58px);
-      letter-spacing: .18em;
+      font-size: clamp(26px, 3.2vw, 52px);
+      letter-spacing: .14em;
       color: #2a2a27;
+      text-align: center;
       transition: transform .45s ease;
     }
 
@@ -176,17 +177,8 @@
       background: linear-gradient(120deg, #f8fbfd, var(--cool));
     }
 
-    .thumb.blank {
-      background:
-        linear-gradient(120deg, rgba(255,255,255,.65), rgba(240,238,232,.75)),
-        repeating-linear-gradient(
-          -45deg,
-          transparent 0,
-          transparent 12px,
-          rgba(0,0,0,.025) 12px,
-          rgba(0,0,0,.025) 13px
-        );
-      color: #aaa69d;
+    .thumb.pressure {
+      background: linear-gradient(120deg, #fbfefe, var(--pressure));
     }
 
     .info {
@@ -240,6 +232,12 @@
       display: flex;
       justify-content: space-between;
       gap: 24px;
+    }
+
+    @media (max-width: 1180px) {
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 980px) {
@@ -302,13 +300,9 @@
         gap: 42px;
       }
 
-      .thumb {
-        aspect-ratio: 4 / 3;
-      }
-
       .thumb-inner {
-        font-size: 42px;
-        letter-spacing: .12em;
+        font-size: 38px;
+        letter-spacing: .1em;
       }
 
       .info {
@@ -331,10 +325,6 @@
         line-height: 1.7;
       }
 
-      .status {
-        font-size: 10px;
-      }
-
       footer {
         padding: 26px 18px;
         flex-direction: column;
@@ -352,8 +342,8 @@
       <a href="#all">ALL</a>
       <a href="#aw">AW</a>
       <a href="#ss">SS</a>
-      <a href="#cool">COOL</a>
-      <a href="#future">FUTURE</a>
+      <a href="#reikyaku">REIKYAKU</a>
+      <a href="#pressure">PRESSURE</a>
     </nav>
   </header>
 
@@ -361,25 +351,24 @@
     <div class="page-head">
       <div>
         <h1>LP INDEX</h1>
-        <p class="lead">シーズン別・商品別のLP一覧です。今後のアイテム追加にも対応できます。</p>
+        <p class="lead">シーズン別・商品別のランディングページ一覧です。公開中のページへすぐ移動できます。</p>
       </div>
 
       <div class="filters">
         <a class="active" href="#all">ALL</a>
         <a href="#aw">AW</a>
         <a href="#ss">SS</a>
-        <a href="#cool">COOL</a>
-        <a href="#future">FUTURE</a>
+        <a href="#reikyaku">REIKYAKU</a>
+        <a href="#pressure">PRESSURE</a>
       </div>
     </div>
 
     <div class="toolbar">
       <span>View: Landing Pages</span>
-      <span>3 published / add more items below</span>
+      <span>4 published</span>
     </div>
 
     <section id="all" class="grid">
-      <!-- 公開中：AW -->
       <a class="item" id="aw" href="./RIRALEGI-AW/">
         <div class="thumb aw">
           <div class="thumb-inner">AW</div>
@@ -387,13 +376,12 @@
         <div class="info">
           <div class="meta">27AW / LEGGINGS</div>
           <div class="name">RIRALEGI AW</div>
-          <div class="desc">秋から冬まで、心地よく。プリーツ微起毛・リブ・ベロアの秋冬LP。</div>
+          <div class="desc">秋から冬まで、心地よく。リブとベロアの秋冬向けLP。</div>
           <div class="price">本体価格 799円 / 税込価格 878円</div>
           <div class="status">PUBLISHED</div>
         </div>
       </a>
 
-      <!-- 公開中：SS -->
       <a class="item" id="ss" href="./RIRALEGI-SS/">
         <div class="thumb ss">
           <div class="thumb-inner">SS</div>
@@ -401,14 +389,13 @@
         <div class="info">
           <div class="meta">27SS / RELAX SUMMER PANTS</div>
           <div class="name">RIRALEGI SS</div>
-          <div class="desc">春から夏まで、軽やかに。プリーツから夏パンへつなぐ27SS LP。</div>
+          <div class="desc">春から夏まで、軽やかに。プリーツから夏パンツへつなぐSS向けLP。</div>
           <div class="price">本体価格 799円 / 税込価格 878円</div>
           <div class="status">PUBLISHED</div>
         </div>
       </a>
 
-      <!-- 公開中：REIKYAKU leggings -->
-      <a class="item" id="cool" href="./REIKYAKU-leggings/">
+      <a class="item" id="reikyaku" href="./REIKYAKU-leggings/">
         <div class="thumb cool">
           <div class="thumb-inner">COOL</div>
         </div>
@@ -421,17 +408,16 @@
         </div>
       </a>
 
-      <!-- 追加予定：ここをコピーして増やす -->
-      <a class="item" id="future" href="#">
-        <div class="thumb blank">
-          <div class="thumb-inner">NEXT</div>
+      <a class="item" id="pressure" href="./CoolPressureLegwear/">
+        <div class="thumb pressure">
+          <div class="thumb-inner">PRESSURE</div>
         </div>
         <div class="info">
-          <div class="meta">NEXT ITEM</div>
-          <div class="name">NEW LP</div>
-          <div class="desc">新しい商品LPを追加する場合は、このカードをコピーしてリンク先を変更します。</div>
-          <div class="price">価格・シーズン情報を入力</div>
-          <div class="status">DRAFT</div>
+          <div class="meta">27SS / COOL PRESSURE LEGWEAR</div>
+          <div class="name">Cool Pressure Legwear</div>
+          <div class="desc">冷感とすっきり見えを両立する、夏向け着圧レッグウェアのLP。</div>
+          <div class="price">ハイソックス / 10分丈スパッツ</div>
+          <div class="status">PUBLISHED</div>
         </div>
       </a>
     </section>
