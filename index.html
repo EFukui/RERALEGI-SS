@@ -161,6 +161,17 @@
       transition: transform .45s ease;
     }
 
+    .thumb-inner.product-name {
+      font-size: clamp(22px, 2.3vw, 36px);
+      letter-spacing: .12em;
+      line-height: 1.35;
+    }
+
+    .thumb-inner.product-name span {
+      display: block;
+      white-space: nowrap;
+    }
+
     .item:hover .thumb-inner {
       transform: scale(1.03);
     }
@@ -305,6 +316,10 @@
         letter-spacing: .1em;
       }
 
+      .thumb-inner.product-name {
+        font-size: clamp(28px, 9vw, 38px);
+      }
+
       .info {
         padding-top: 14px;
       }
@@ -337,7 +352,7 @@
 
 <body>
   <header class="site-header">
-    <a class="brand" href="./">RIRALEGI</a>
+    <a class="brand" href="./">LEGWEAR LP INDEX</a>
     <nav class="nav">
       <a href="#all">ALL</a>
       <a href="#aw">AW</a>
@@ -371,10 +386,13 @@
     <section id="all" class="grid">
       <a class="item" id="aw" href="./RIRALEGI-AW/">
         <div class="thumb aw">
-          <div class="thumb-inner">AW</div>
+          <div class="thumb-inner product-name">
+            <span>RIRALEGI</span>
+            <span>AW</span>
+          </div>
         </div>
         <div class="info">
-          <div class="meta">27AW / LEGGINGS</div>
+          <div class="meta">26AW / RELAX WINTER LEGGINGS</div>
           <div class="name">RIRALEGI AW</div>
           <div class="desc">秋から冬まで、心地よく。リブとベロアの秋冬向けLP。</div>
           <div class="price">本体価格 799円 / 税込価格 878円</div>
@@ -384,7 +402,10 @@
 
       <a class="item" id="ss" href="./RIRALEGI-SS/">
         <div class="thumb ss">
-          <div class="thumb-inner">SS</div>
+          <div class="thumb-inner product-name">
+            <span>RIRALEGI</span>
+            <span>SS</span>
+          </div>
         </div>
         <div class="info">
           <div class="meta">27SS / RELAX SUMMER PANTS</div>
@@ -397,7 +418,10 @@
 
       <a class="item" id="reikyaku" href="./REIKYAKU-leggings/">
         <div class="thumb cool">
-          <div class="thumb-inner">COOL</div>
+          <div class="thumb-inner product-name">
+            <span>REIKYAKU</span>
+            <span>LEGGINGS</span>
+          </div>
         </div>
         <div class="info">
           <div class="meta">REIKYAKU / LEGGINGS</div>
@@ -410,13 +434,16 @@
 
       <a class="item" id="pressure" href="./CoolPressureLegwear/">
         <div class="thumb pressure">
-          <div class="thumb-inner">PRESSURE</div>
+          <div class="thumb-inner product-name">
+            <span>COOL</span>
+            <span>PRESSURE</span>
+          </div>
         </div>
         <div class="info">
-          <div class="meta">27SS / COOL PRESSURE LEGWEAR</div>
+          <div class="meta">COOL PRESSURE LEGWEAR</div>
           <div class="name">Cool Pressure Legwear</div>
           <div class="desc">冷感とすっきり見えを両立する、夏向け着圧レッグウェアのLP。</div>
-          <div class="price">ハイソックス / 10分丈スパッツ</div>
+          <div class="price">本体価格 249円から / 税込価格 273円から</div>
           <div class="status">PUBLISHED</div>
         </div>
       </a>
